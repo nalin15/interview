@@ -1,0 +1,90 @@
+﻿1) Skills Required: .NET, MVC/.NET Core, Power BI, SSIS, Azure and Angular
+
+Develop and support applications built on Microsoft technologies including .NET
+Framework (.NET/.NET Core/MVC/Web API), MSBI (SQL Server, SSIS, Power BI) and
+Azure.
+•             Design, develop, manage and support SQL Server databases that include but not limited
+to- writing complex SQL queries, stored procedures, functions, triggers, managing permissions
+etc.
+•             Develop, support and monitor SSIS and SQL Server Agent based solutions.
+•             Work with Agile Methodology and follow sprints effectively.
+•             Communicate effectively with the clients, users and onshore team.
+•             Should be able to write technical documents and create presentations.
+•             Ensure quality releases for highly scalable systems.
+•             Participate actively in requirement gathering, detailed design, code reviews, and bug
+discussions and drive discussion around appropriate solutions.
+•             Influence the design, code, and architecture of applications by reviewing requirements,
+functional specifications, design, data models, code, and test plans.
+•             Ability to work independently is very important.
+•             Should be able to work in a 24x7, fast paced and pressing environment.
+•             Depending on the project need, should have flexibility to work in any shift, including
+night shift.
+
+2) MS-SQL on Azure
+3) Net Core, Web.API, Entity Framework, Moq, Unity
+4) Worked on Microservices - 
+   https://developers.redhat.com/blog/2018/10/01/patterns-for-distributed-transactions-within-a-microservices-architecture/
+
+5) Any knowledge in app migrations from in-house app to cloud is a big advantage
+6) Reasonable knowledge of Azure (Blob, app services, VMs)
+
+
+1)design patter
+   a) singlton 
+   b) absractMethod
+   c) Abstract Factory Method
+   d) Builder 
+
+   e) Adapter
+   f) bridge 
+   f) facade pattern
+
+   g) Decorator
+   h) iterator
+   i) Template
+   j) Null object
+
+2) solid principle  question 
+
+https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle/
+
+3) opps all concept 
+    1) method hide,over-ridding, static, interface,abastract class
+    2) Genric and Genric template and constraint 
+    3) collection,Closer,equalto  and == , method over ridding , method  recognise , singleton seald, delegates,
+	enumrable and Iqurablee , Ienumrable ,As and IS, outh 2.o ,Session, IOC, 
+	unity, MOQ testing
+ 	Icomparable vs i compare,
+	heap and stack ,string ,value, extension method.
+   4) remove switch case with straightgey pattern.
+			http://blogs.microsoft.co.il/gilf/2009/11/22/applying-strategy-pattern-instead-of-using-switch-statements/
+
+
+4) .net garbase  collector 
+    use of dispose 
+
+5) CLR , CTS , JIT 
+
+
+6) MVC   
+   a) Router 
+   b) Fillter 
+   c) Exception Handling 
+   d) cashing
+
+7) .Net core ALL in Details and .Net standar, short circuite , caching , 
+8) database 
+
+   a) temp table , temp variale and function 
+    b) function and store proc me diff
+   c) index 
+   d) CTE  , CTE with reporting things/ Recursive
+   e) where and having , nth posigion , 2 largest 
+   f) cross  and self join,full outerjoin
+   h) cursor , trigger  , ## , # table, @@ table,
+   i) funciton try catch, dense rank , row number ,rank.
+   j) table variable , temp table ... can we use/pass in nested procedure.
+
+9) Angular 2 interview question 
+
+   
