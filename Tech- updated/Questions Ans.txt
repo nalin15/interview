@@ -45,6 +45,11 @@ night shift.
    j) Null object
 
 2) solid principle  question 
+  S- Single responsible
+  o- open closed , open for extension and close for modificaion
+  l- liskow subtitution
+  i- interface segration 
+  d- dependency injection.
 
 https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle/
 
@@ -63,7 +68,7 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
 4) .net garbase  collector 
     use of dispose 
 
-5) CLR , CTS , JIT 
+5) CLR , CTS , JIT, srilog, kibana, elastic search, Rabit MQ.
 
 
 6) MVC   
