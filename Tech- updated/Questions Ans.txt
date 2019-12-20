@@ -92,4 +92,7 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
 
 9) Angular 2 interview question 
 
+code complexcity : Cyclomatic complexity.
+
+
    
