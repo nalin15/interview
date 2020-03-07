@@ -63,21 +63,30 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
 	heap and stack ,string ,value, extension method.
    4) remove switch case with straightgey pattern.
 			http://blogs.microsoft.co.il/gilf/2009/11/22/applying-strategy-pattern-instead-of-using-switch-statements/
-
+   5) extension method . 
+   6) authentication filter, globly implemetn loging and authentication 
+   7) inforamtion in oauth 2.0 token and how to implement 
+   8) how to talk micro service each other 
+   9) aply formater : only allow xml as output
+   10) load assembly dynamically : 
+   11) load class dynamically 
+   12) read json file from .net core. 
 
 4) .net garbase  collector 
     use of dispose 
+    GC genration 
 
 5) CLR , CTS , JIT, srilog, kibana, elastic search, Rabit MQ.
 
 
 6) MVC   
    a) Router 
-   b) Fillter 
+   b) Fillter  : which class to be inherited for extending the filter 
    c) Exception Handling 
    d) cashing
 
 7) .Net core ALL in Details and .Net standar, short circuite , caching , 
+	what is medileware and how diffrence from service. 
 8) database 
 
    a) temp table , temp variale and function 
@@ -89,6 +98,10 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
    h) cursor , trigger  , ## , # table, @@ table,
    i) funciton try catch, dense rank , row number ,rank.
    j) table variable , temp table ... can we use/pass in nested procedure.
+   h) set date + 5 day for each row 
+   i) views - not update table why, order by not working 
+   j) nested transaction - savepoint @@ transaction   
+   
 
 9) Angular 2 interview question 
 
