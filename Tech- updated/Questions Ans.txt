@@ -71,6 +71,18 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
    10) load assembly dynamically : 
    11) load class dynamically 
    12) read json file from .net core. 
+   
+   api version : by url querystring , url and by media (header)
+                 addurlversion service and middleware to startup file 
+   not multiple get metod in same controller - work on prefix 
+   add api document swagger by adding swashbuckle.aspnetcore pkg
+   by add service and medilewar to startup class 
+   
+   autho token : JWt  (diffirent one) have 3 part in token (jsoan web token)
+                   header : token algorithm , tokentpe
+		   payload : user inforamotin 
+		   signature : create signature useing header and payloaod and secreat key 
+   
 
 4) .net garbase  collector 
     use of dispose 
