@@ -101,18 +101,21 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
 	what is medileware and how diffrence from service. 
 8) database 
 
-   a) temp table , temp variale and function 
+   a) temp table , temp variale and function,  index on temp table and table variabl ,
     b) function and store proc me diff
    c) index 
    d) CTE  , CTE with reporting things/ Recursive
    e) where and having , nth posigion , 2 largest 
    f) cross  and self join,full outerjoin
    h) cursor , trigger  , ## , # table, @@ table,
-   i) funciton try catch, dense rank , row number ,rank.
+   i) funciton try catch, dense rank , row number ,rank. ,  row no by partision  by depart.
    j) table variable , temp table ... can we use/pass in nested procedure.
    h) set date + 5 day for each row 
-   i) views - not update table why, order by not working 
+   i) views - not update table why, order by not working, 
    j) nested transaction - savepoint @@ transaction   
+   h) Merge statement for migration , 
+   i) count(*), count(1), count(2) if column 2 have null value, sum(1),sum(2), sum(3) if  table  have 5 row,
+    
    
 
 9) Angular 2 interview question 
