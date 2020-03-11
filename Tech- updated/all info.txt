@@ -118,6 +118,15 @@ and storage Account : if same in region , good performance
 
 Storage account name : az203batchstogeacc
 
+======================================================
+Create Kubernetes cluster
+
+Add Group Name same : AZ203RSGroup
+culster Name :AZ302KubernetesCluster
+dns : AZ203KubernetesCluster-dns
+
+
+
 
 
 ==================================================
