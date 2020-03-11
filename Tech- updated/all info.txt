@@ -1,0 +1,96 @@
+netsh wlan set hostednetwork mode=allow ssid=www.FastTechBuzz.com key=FastTechBuzz
+
+netsh wlan start hostednetwork
+com/watch?v=ou5qsvA_wu8&t=3850s&list=PLPrqsA3nbIJZS6dJAkO0_63Ub8qdiOo8P&index=24
+
+======================================================================================
+nalinbhattaaws@gmail.com
+
+nalinbhattaaws@gmail.com
+aws@passw0rd
+Account number:849562904672
+P@ssw0rd
+
+Account Id:849562904672 
+Account Name:cloud-nalin 
+Password: P@ssw0rd
+*****
+https://us-east-2.console.aws.amazon.com/ec2/v2/home?region=us-east-2#Instances:search=i-0038f52ee95c2f2b8;sort=instanceType
+
+Public DNS	ec2-18-217-57-178.us-east-2.compute.amazonaws.com
+User name	Administrator
+Password :      @u-PZkeg3ivdFCk3yGBV(SA;y@3zD-%K 
+
+new instance:
+ 
+Public DNS	ec2-18-189-14-247.us-east-2.compute.amazonaws.com
+User name	Administrator
+Password	X@UcvWUDec235bd(2Msa8*XZ8U7MpM8h 
+
+
+udemy : 
+nalinbhatt@gmail.com
+ud@passw0rd
+
+for Azure Devops
+https://www.youtube.com/watch?v=Xi_r-lZ1Bzk&list=PLaFzfwmPR7_Ifxq-udm66fhReFeGOe2x_&index=30
+
+AZure devops login : nalinbhatta@gmail.com
+
+AZure Account
+nalinbhattaAZ@gmail.com
+p@$$w0rd@AZ
+
+
+Azure settings +++++++++++++++++++++++++++++++++++++++++++++++
+
+
+AZure devops login : nalinbhatta@gmail.com
+
+AZure Account 
+nalinbhattaAZ@gmail.com 
+p@$$w0rd@AZ   - same for gmail and Azure too.
+
+
+Resource Group = AZ203RSGroup
+instance Name : AZ203WSVM
+Azure compute  userid and password
+
+AZ203admin
+AZ203admin@passw0rd
+
+virtula network :
+AZ203RSGroup-vnet
+
+Dignosis:
+AZ203RSGroupDiag
+
+IP address
+40.122.109.8
+
+az203wsvm.centralus.cloudapp.azure.com	
++++++++++++++++++++++++++++++++++++++++++++++++++
+Encryption 
+key valt :
+Name :AZ203KeyVault-US-cen
+Region: US-central 
+--------------------
+encrption key - under key valt
+Name  : AZ203Key-Encryp-US-cen
+
+powershel:
+psfileshare
+
+-------------------==========================
+
+1) resources and resourese group 
+
+Microsoft has a Github page that contains 12 labs for AZ-203:
+
+https://microsoftlearning.github.io/AZ-203-DevelopingSolutionsforMicrosoftAzure/
+
+This gives you step-by-step instructions for creating resources in the Azure Portal, and even deploying sample code into web apps.
+
+
+
+
