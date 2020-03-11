@@ -84,7 +84,43 @@ Name  : AZ203Key-Encryp-US-cen
 powershel:
 psfileshare
 
--------------------==========================
+
+
++++++++++++++++++++++++
+On power Shell excute the cmd : from Azure docs : (Encrypt a virtual machine Azure)
+
+$keyVault = Get-AzKeyVault -VaultName "AZ203KeyVault-US-cen" -ResourceGroupName "AZ203RSGroup";
+$diskEncryptionKeyVaultUrl = $keyVault.VaultUri;
+$keyVaultResourceId = $keyVault.ResourceId;
+$keyEncryptionKeyUrl = (Get-AzKeyVaultKey -VaultName "AZ203KeyVault-US-cen" -Name AZ203Key-Encryp-US-cen).Key.kid;
+
+
+Set-AzVMDiskEncryptionExtension -ResourceGroupName "AZ203RSGroup" `
+    -VMName "AZ203WSVM"  `
+    -DiskEncryptionKeyVaultUrl $diskEncryptionKeyVaultUrl `
+    -DiskEncryptionKeyVaultId $keyVaultResourceId `
+    -KeyEncryptionKeyUrl $keyEncryptionKeyUrl `
+    -KeyEncryptionKeyVaultId $keyVaultResourceId
+
+
+Get-AzVmDiskEncryptionStatus  -ResourceGroupName "AZ203RSGroup" -VMName "AZ203WSVM" 
+
+--===============================================================
+2) Batch Service . 
+
+find Batch servie : 
+
+Add Group Name same : AZ203RSGroup
+Batch Account Name :  az203batchsrv
+select Reginion
+
+and storage Account : if same in region , good performance
+
+Storage account name : az203batchstogeacc
+
+
+
+==================================================
 
 1) resources and resourese group 
 
