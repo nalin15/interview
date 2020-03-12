@@ -134,8 +134,36 @@ run image : from
 https://hub.docker.com/r/microsoft/azure-vote-front/
 
 https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal
+--=======================================================================
+
+install docker toolbox 
+https://docs.docker.com/toolbox/toolbox_install_windows/
 
 
+https://github.com/Azure-Samples/azure-voting-app-redis/blob/master/docker-compose.yaml
+
+> docker compouse up -d
+
+this wiil locally run the image on docker container. 
+
+> docker container ls 
+>docker machine ip default
+
+> docker compouse down -d
+
+Create container registry
+name: az203DockerCon
+resourece Group :AZ203RSGroupDocContainer 
+
+check conatiner reposatiry on portal.
+
+the push the docker impage to reposatary . -- az203dockercon.azurecr.io
+
+use below to work on coantainer and 
+https://github.com/Azure-Samples/aks-dotnet-manage-kubernetes-cluster 
+-==============================================================================================
+Azure APP services :
+resourece AZ203RSWebAPP
 
 
 
