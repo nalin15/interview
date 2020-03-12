@@ -165,7 +165,14 @@ https://github.com/Azure-Samples/aks-dotnet-manage-kubernetes-cluster
 Azure APP services :
 resourece AZ203RSWebAPP
 
+--------------------------
+web jobs : it's job based on scheduler and cron based background job that associated with webjobs.
 
+Since the AZ-203 exam will want you to develop for App Services, here is a relevant Getting Started Github project:
+
+https://github.com/Azure-Samples/app-service-web-dotnet-get-started
+
+Other languages and samples are available in that Github repository.
 
 
 ==================================================
