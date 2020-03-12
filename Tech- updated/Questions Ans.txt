@@ -84,7 +84,8 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
 		   signature : create signature useing header and payloaod and secreat key 
 		   
   Static  Assembely , dynamic assembly, satelite Assembely, serilization, Genric,Attribute in  class ,Reflextion, 
-  delegate, dynamics ,mutable and unmutale, drawback of extendgint interface ,template, determistic finilizetion,debug class and trace class,constant and readonly, API and microservice, iapplicationbuilder.use and ipplicationbuider.run ,
+  delegate, dynamics ,mutable and unmutale, drawback of extendgint interface ,template, determistic finilizetion,
+  debug class and trace class,constant and readonly, API and microservice, iapplicationbuilder.use and ipplicationbuider.run ,
   crud opration in asp.net core.
    
 
