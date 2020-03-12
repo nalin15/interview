@@ -121,9 +121,20 @@ Storage account name : az203batchstogeacc
 ======================================================
 Create Kubernetes cluster
 
-Add Group Name same : AZ203RSGroup
-culster Name :AZ302KubernetesCluster
+Add Group Name same : AZ203RSGroupAKS
+culster Name :AZ203KubernetesCluster
 dns : AZ203KubernetesCluster-dns
+
+now use power shell command on Azure 
+
+> az aks get-credentials --resource-group AZ203RSGroupAKS --name AZ203KubernetesCluster 
+
+run image : from 
+
+https://hub.docker.com/r/microsoft/azure-vote-front/
+
+https://docs.microsoft.com/en-us/azure/aks/kubernetes-walkthrough-portal
+
 
 
 
