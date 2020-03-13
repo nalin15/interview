@@ -175,6 +175,13 @@ https://github.com/Azure-Samples/app-service-web-dotnet-get-started
 Other languages and samples are available in that Github repository.
 
 --========================================================================================
+skip -> mobile apps 
+     -> API APPS.
+-- Start - AZure fucniotns -- platfrom as service 
+webhoks - funciton that will run when ever it will recive http request.
+timer - excute the fucniton on timer or scheduler.
+
+
 
 ===============+++++++++++++++++++++++++++++++++-==================================================
 make a simple api gateway. 
