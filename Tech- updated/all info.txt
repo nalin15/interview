@@ -174,17 +174,12 @@ https://github.com/Azure-Samples/app-service-web-dotnet-get-started
 
 Other languages and samples are available in that Github repository.
 
+--========================================================================================
 
-==================================================
-
-1) resources and resourese group 
-
-Microsoft has a Github page that contains 12 labs for AZ-203:
-
-https://microsoftlearning.github.io/AZ-203-DevelopingSolutionsforMicrosoftAzure/
-
-This gives you step-by-step instructions for creating resources in the Azure Portal, and even deploying sample code into web apps.
-
+===============+++++++++++++++++++++++++++++++++-==================================================
+make a simple api gateway. 
+https://medium.com/streamwriter/api-gateway-aspnet-core-a46ef259dc54
+https://github.com/Mirch/OzNet
 
 
 
