@@ -171,7 +171,9 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
   -- designe pattern 
   --straitgey comes behaviour 
   -- api versioning 
-  --
+  -- attribute on []
+  -- version on api on swageger .
+  
    
    
    
