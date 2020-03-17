@@ -108,6 +108,62 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
 
 7) .Net core ALL in Details and .Net standar, short circuite , caching , 
 	what is medileware and how diffrence from service. 
+    
+    a) liskow subtitution : exampl in real world 
+    b) dependecy injection in mvc and .net core 
+    c) use abstract ,concreat, enum , interface in use dependecny injection 
+    d) through resolve dependecny throgh property and method 
+    
+    scop and trainsiate method in .net core --  real use of thease 
+      make multiple object in one http request . 
+    
+    for which class use trainsiate  and for which use scoped. 
+    
+    example : 
+    one interface : Itransiate,   : push notification method  in interface. 
+    email service
+    message sercie 
+    other service 
+    
+    clalint table :  3 client 
+    1 subscribe eamil 
+    2 message 
+    3. other 
+    
+    controler : inject  inotifation interface 
+    
+    actioin : 
+    inotifaction object to call push notification method 
+    
+    make in .net core .
+    
+    here client base service like email , message , othere
+    
+    --  input parameter for app.run() methoda 
+         parameter app.use() 
+	 
+   -- delegete used in trainsiate  and scoped
+   --  model binder in asp.core
+   
+   -- web api - validation  - 
+   -- cutome validatition  -- 
+  -- value provider in .net core  
+  -- wild card partern in routing - like * 
+  --  action /cotroler/* 
+  
+  ---action and func in delegate 
+  -- anonomus fumction 
+  --  user of ienubarable and ilist 
+  --  param keywrod  in C#
+  
+   
+   
+   
+    
+    
+    
+    
+
 8) database 
 
    a) temp table , temp variale and function,  index on temp table and table variabl ,
@@ -124,6 +180,10 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
    j) nested transaction - savepoint @@ transaction   
    h) Merge statement for migration , 
    i) count(*), count(1), count(2) if column 2 have null value, sum(1),sum(2), sum(3) if  table  have 5 row,
+   g) bulk inserting data in sql. from 5000 rows .
+   g) sql injecion - without procedure. 
+   g) corss sides scription , cross side frodery. 
+   
     
    
 
@@ -133,3 +193,5 @@ code complexcity : Cyclomatic complexity.
 
 
    
+10) Azure micro services with  azure function,azure service bus, azure logic apps using asp.net core. 
+
