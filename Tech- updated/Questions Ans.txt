@@ -1,4 +1,4 @@
-﻿1) Skills Required: .NET, MVC/.NET Core, Power BI, SSIS, Azure and Angular
+1) Skills Required: .NET, MVC/.NET Core, Power BI, SSIS, Azure and Angular
 
 Develop and support applications built on Microsoft technologies including .NET
 Framework (.NET/.NET Core/MVC/Web API), MSBI (SQL Server, SSIS, Power BI) and
@@ -157,22 +157,128 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
   --  param keywrod  in C#
   
   -- transsaction scope used for maintain transaction between to database table. 
-  -- sequence betweenn two table across many table .  
+  -- 
   123 ,then 456 
   -- 
   -- singleton and static class diffirence 
-  -- static class intanceiated 
+  
+  -- static class intanceiated  : No  and not inherited too . it's like seald class.
+  
   -- will the grabse collection collect from stack or heap 
+		Garbage collector manages allocation and reclaim of memory.
+		GC works on managed heap, which is nothing but a block of memory to store objects.
+		There is no specific timings for GC to get triggered, GC automatically start operation.
+		Managed objects are created, managed and under scope of CLR.
+		Unmanaged objects are wrapped around operating system resources like file streams, database connections, network related instances, handles to different classes, registries, pointers, etc.
+		Unmanaged resources can be cleaned-up using 'Dispose' method and 'using' statement.
+
   -- garbage collector - o,1,2
   -- marking phage , compection phage 
+  There are mainly 3 phases in garbage collection. Details about these are given as follows
+	Marking Phase: A list of all the live objects is created during the marking phase. This is done by following the references from all 
+	the root objects. All of the objects that are not on the list of live objects are potentially deleted from the heap memory.
+	
+	Relocating Phase: The references of all the objects that were on the list of all the live objects are updated in the relocating 
+	phase so that they point to the new location where the objects will be relocated to in the compacting phase.
+	
+	Compacting Phase: The heap gets compacted in the compacting phase as the space occupied by the dead objects is released and the live 
+	objects remaining are moved. All the live objects that remain after the garbage collection are moved towards the older end of the heap 
+	memory in their original order.
+	
+	Generation 0 : All the short-lived objects such as temporary variables are contained in the generation 0 of the heap memory. 
+	All the newly allocated objects are also generation 0 objects implicitly unless they are large objects. In general, the frequency
+	of garbage collection is the highest in generation 0.
+	Generation 1 : If space occupied by some generation 0 objects that are not released in a garbage collection run, then these objects
+	get moved to generation 1. The objects in this generation are a sort of buffer between the short-lived objects in generation 0 and the
+	long-lived objects in generation 2.
+	Generation 2 : If space occupied by some generation 1 objects that are not released in the next garbage collection run, then these 
+	objects get moved to generation 2. The objects in generation 2 are long lived such as static objects as they remain in the heap memory
+	for the whole process duration.
+
   --finally and dispose 
   -- idisposabe interface - 
-  -- use of  disposable pattern  and finally 
+		IDisposable is an interface that contains a single method, Dispose(), for releasing unmanaged resources,
+		like files, streams, database connections and so on. This method is implemented explicitly in the code when we need to 
+		clean up a disposable object and to release unmanaged resources that this disposable object holds.
+
+  -- use of  disposable pattern  and finally -- 
   -- designe pattern 
-  --straitgey comes behaviour 
-  -- api versioning 
+  --straitgey comes behaviour -- desigin pattern creational , behavior, structural, 
+  -- api versioning -- three way , by url, query string , by header . 
+			add attribut [ApiVersion("1")] to controler,
   -- attribute on []
   -- version on api on swageger .
+  
+    public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc();
+    services.AddApiVersioning();
+
+    services.AddApiVersioning(o =>
+    {
+        o.AssumeDefaultVersionWhenUnspecified = true;
+        o.DefaultApiVersion = new ApiVersion(1, 0);
+    });
+
+    services.AddSwaggerGen(options =>
+    {
+        options.SwaggerDoc("v1",
+            new Info
+            {
+                Version = "v1",
+                Title = "v1 API",
+                Description = "v1 API Description",
+                TermsOfService = "Terms of usage v1"
+            });
+
+        // Add a SwaggerDoc for v2 
+        options.SwaggerDoc("v2",
+            new Info
+            {
+                Version = "v2",
+                Title = "v2 API",
+                Description = "v2 API Description",
+                TermsOfService = "Terms of usage v3"
+            });
+
+                // Apply the filters
+        options.OperationFilter<RemoveVersionFromParameter>();
+        options.DocumentFilter<ReplaceVersionWithExactValueInPath>();
+
+                // Ensure the routes are added to the right Swagger doc
+        options.DocInclusionPredicate((version, desc) =>
+        {
+            var versions = desc.ControllerAttributes()
+                .OfType<ApiVersionAttribute>()
+                .SelectMany(attr => attr.Versions);
+
+            var maps = desc.ActionAttributes()
+                .OfType<MapToApiVersionAttribute>()
+                .SelectMany(attr => attr.Versions)
+                .ToArray();
+
+            return versions.Any(v => $"v{v.ToString()}" == version)
+                          && (!maps.Any() || maps.Any(v => $"v{v.ToString()}" == version));;
+        });
+
+    });
+
+}
+
+public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+{
+    loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+    loggerFactory.AddDebug();
+
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint($"/swagger/v1/swagger.json", $"v1");
+                // Specify and endpoint for v2
+        c.SwaggerEndpoint($"/swagger/v2/swagger.json", $"v2");
+    });
+    app.UseMvc();
+}
   
    
    
@@ -185,14 +291,91 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
 8) database 
 
    a) temp table , temp variale and function,  index on temp table and table variabl ,
+		Temporary tables are allowed CREATE INDEXes whereas, Table variables aren’t allowed CREATE INDEX instead they can have index
+		 by using Primary Key or Unique Constraint.
+
     b) function and store proc me diff
+			Function must return a value.	Stored Procedure may or not return values.
+			Will allow only Select statements, it will not allow us to use DML statements.	Can have select statements as well as DML statements such as insert, update, delete and so on
+			It will allow only input parameters, doesn't support output parameters.	It can have both input and output parameters.
+			It will not allow us to use try-catch blocks.	For exception handling we can use try catch blocks.
+			Transactions are not allowed within functions.	Can use transactions within Stored Procedures.
+			We can use only table variables, it will not allow using temporary tables.	Can use both table variables as well as temporary table in it.
+			Stored Procedures can't be called from a function.	Stored Procedures can call functions.
+			Functions can be called from a select statement.	Procedures can't be called from Select/Where/Having and so on statements. Execute/Exec statement can be used to call/execute Stored Procedure.
+			A UDF can be used in join clause as a result set.	Procedures can't be used in Join clause
    c) index 
-   d) CTE  , CTE with reporting things/ Recursive
-   e) where and having , nth posigion , 2 largest 
-   f) cross  and self join,full outerjoin
+   d) CTE  , CTE with reporting things/ Recursive 
+		WITH UserCTE AS (
+		SELECT userId, userName, managerId,0 AS steps
+		FROM dbo.Users
+		WHERE userId = 7
+    
+		UNION ALL
+  
+		SELECT mgr.userId, mgr.userName, mgr.managerId, usr.steps +1 AS steps
+		FROM UserCTE AS usr
+		INNER JOIN dbo.Users AS mgr
+		ON usr.managerId = mgr.userId
+)
+SELECT * FROM UserCTE AS u;
+   e) where and having , nth posigion , 2 largest  
+		select * from(
+		select ename, sal, dense_rank() 
+		over(order by sal desc)r from Employee) 
+		where r=&n;
+
+		To find to the 2nd highest sal set n = 2
+		To find 3rd highest sal set n = 3 and so on.
+
+   f) cross  and self join,full outerjoin - done 
    h) cursor , trigger  , ## , # table, @@ table,
    i) funciton try catch, dense rank , row number ,rank. ,  row no by partision  by depart.
+		The RANK function is used to retrieve ranked rows based on the condition of the ORDER BY clause. (1,1,3,3,3,6,6,)
+		The DENSE_RANK function is similar to RANK function however the DENSE_RANK function does not skip any ranks (1,1,1,2,2,)
+		Unlike the RANK and DENSE_RANK functions, the ROW_NUMBER function simply returns the row number of the sorted records starting with 1. (1,2,3,4,5,)
+		prtision by :		
+		SELECT name,company, power,
+		DENSE_RANK() OVER(PARTITION BY company ORDER BY power DESC) AS DensePowerRank
+		FROM Cars
+		
+		SELECT name,company, power,
+		ROW_NUMBER() OVER(ORDER BY power DESC) AS RowRank
+		FROM Cars
+		
    j) table variable , temp table ... can we use/pass in nested procedure.
+		1) Temporary tables and table variables, both have their own pros and cons. We need to decide which one to use and when.
+			Let us compile the list for differences.
+
+		⇒ Table variable (@table) is created in the memory. Whereas, a Temporary table (#temp) is created in the tempdb database. However,
+		 if there is a memory pressure the pages belonging to a table variable may be pushed to tempdb.
+
+		⇒ Table variables cannot be involved in transactions, logging or locking. This makes @table faster then #temp. So table variable
+		 is faster then temporary table.
+
+		⇒ Temporary tables are allowed CREATE INDEXes whereas, Table variables aren’t allowed CREATE INDEX instead they can have index
+		 by using Primary Key or Unique Constraint.
+
+		⇒ Table variable can be passed as a parameter to functions and stored procedures while the same cannot be done with Temporary tables.
+
+		⇒ Temporary tables are visible in the created routine and also in the child routines. Whereas, Table variables are only visible in the created routine.
+
+		⇒ Temporary table allows Schema modifications unlike Table variables.
+
+		2) CTE - Common Table Expressions
+
+		With CTE1(Address, Name, Age)--Column names for CTE, which are optional
+		AS
+		(
+		SELECT Addr.Address, Emp.Name, Emp.Age from Address Addr
+		INNER JOIN EMP Emp ON Emp.EID = Addr.EID
+		)
+		SELECT * FROM CTE1 --Using CTE 
+		WHERE CTE1.Age > 50
+		ORDER BY CTE1.NAME
+
+	This is used to store the result of a complex subquery for further use.
+	This is also used to create a recursive query.
    h) set date + 5 day for each row 
    i) views - not update table why, order by not working, 
    j) nested transaction - savepoint @@ transaction   
@@ -213,3 +396,4 @@ code complexcity : Cyclomatic complexity.
    
 10) Azure micro services with  azure function,azure service bus, azure logic apps using asp.net core. 
 
+    
