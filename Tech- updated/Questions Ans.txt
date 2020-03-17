@@ -7,7 +7,7 @@ Azure.
 to- writing complex SQL queries, stored procedures, functions, triggers, managing permissions
 etc.
 •             Develop, support and monitor SSIS and SQL Server Agent based solutions.
-•             Work with Agile Methodology and follow sprints effectively.
+•             Work with Agile Methodology and follow sprints effdectively.
 •             Communicate effectively with the clients, users and onshore team.
 •             Should be able to write technical documents and create presentations.
 •             Ensure quality releases for highly scalable systems.
@@ -156,6 +156,22 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
   --  user of ienubarable and ilist 
   --  param keywrod  in C#
   
+  -- transsaction scope used for maintain transaction between to database table. 
+  -- sequence betweenn two table across many table .  
+  123 ,then 456 
+  -- 
+  -- singleton and static class diffirence 
+  -- static class intanceiated 
+  -- will the grabse collection collect from stack or heap 
+  -- garbage collector - o,1,2
+  -- marking phage , compection phage 
+  --finally and dispose 
+  -- idisposabe interface - 
+  -- use of  disposable pattern  and finally 
+  -- designe pattern 
+  --straitgey comes behaviour 
+  -- api versioning 
+  --
    
    
    
