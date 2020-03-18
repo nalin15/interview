@@ -1,23 +1,47 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@nalin15 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+nalin15
+/
+interview
+1
+00
+ Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights Settings
+interview/Tech- updated/Questions Ans.txt
+@nalin15 nalin15 with ans
+cb0ce51 14 hours ago
+399 lines (308 sloc)  17 KB
+  
 1) Skills Required: .NET, MVC/.NET Core, Power BI, SSIS, Azure and Angular
 
 Develop and support applications built on Microsoft technologies including .NET
 Framework (.NET/.NET Core/MVC/Web API), MSBI (SQL Server, SSIS, Power BI) and
 Azure.
-•             Design, develop, manage and support SQL Server databases that include but not limited
+•             Design, develop, manage and support SQL Server databases that include but not limited
 to- writing complex SQL queries, stored procedures, functions, triggers, managing permissions
 etc.
-•             Develop, support and monitor SSIS and SQL Server Agent based solutions.
-•             Work with Agile Methodology and follow sprints effdectively.
-•             Communicate effectively with the clients, users and onshore team.
-•             Should be able to write technical documents and create presentations.
-•             Ensure quality releases for highly scalable systems.
-•             Participate actively in requirement gathering, detailed design, code reviews, and bug
+•             Develop, support and monitor SSIS and SQL Server Agent based solutions.
+•             Work with Agile Methodology and follow sprints effdectively.
+•             Communicate effectively with the clients, users and onshore team.
+•             Should be able to write technical documents and create presentations.
+•             Ensure quality releases for highly scalable systems.
+•             Participate actively in requirement gathering, detailed design, code reviews, and bug
 discussions and drive discussion around appropriate solutions.
-•             Influence the design, code, and architecture of applications by reviewing requirements,
+•             Influence the design, code, and architecture of applications by reviewing requirements,
 functional specifications, design, data models, code, and test plans.
-•             Ability to work independently is very important.
-•             Should be able to work in a 24x7, fast paced and pressing environment.
-•             Depending on the project need, should have flexibility to work in any shift, including
+•             Ability to work independently is very important.
+•             Should be able to work in a 24x7, fast paced and pressing environment.
+•             Depending on the project need, should have flexibility to work in any shift, including
 night shift.
 
 2) MS-SQL on Azure
@@ -147,21 +171,233 @@ https://www.c-sharpcorner.com/UploadFile/pranayamr/liskov-substitution-principle
    
    -- web api - validation  - 
    -- cutome validatition  -- 
-  -- value provider in .net core  
+  -- value provider in .net core 
+  
+  --=======================================================================================
+  
   -- wild card partern in routing - like * 
   --  action /cotroler/* 
+      The wildcard can only be used as last segment of a route definition
   
   ---action and func in delegate 
-  -- anonomus fumction 
+  
+    he Func and Action generic delegates were introduced in the .NET Framework version 3.5.
+	Whenever we want to use delegates in our examples or applications, typically we use the following procedure:
+
+	Define a custom delegate that matches the format of the method.
+	Create an instance of a delegate and point it to a method.
+	Invoke the method.
+	But, using these 2 Generics delegates we can simply eliminate the above procedure.
+
+	Since both the delegates are generic, you will need to specify the underlying types of each parameter as well while pointing it to a function. For for example Action<type,type,type……>
+
+	Action<>
+
+	The Generic Action<> delegate is defined in the System namespace of microlib.dll
+	This Action<> generic delegate; points to a method that takes up to 16 Parameters and returns void.
+	Func<>
+
+	The generic Func<> delegate is used when we want to point to a method that returns a value.
+	This delegate can point to a method that takes up to 16 Parameters and returns a value.
+	Always remember that the final parameter of Func<> is always the return value of the method. (For example, Func< int, int, string>, this version of the Func<> delegate will take 2 int parameters and returns a string value.)
+
+
+      
+  
+    https://www.tutorialsteacher.com/csharp/csharp-func-delegate
+	Func is built-in delegate type.
+	Func delegate type must return a value.
+	Func delegate type can have zero to 16 input parameters.
+	Func delegate does not allow ref and out parameters.
+	Func delegate type can be used with an anonymous method or lambda expression.
+    
+	https://www.tutorialsteacher.com/csharp/csharp-action-delegate
+	Action delegate is same as func delegate except that it does not return anything. Return type must be void.
+	Action delegate can have 0 to 16 input parameters.
+	Action delegate can be used with anonymous methods or lambda expressions.
+  
+  -- anonomus fumction  
+     https://www.tutorialsteacher.com/csharp/csharp-anonymous-method
+	 
+		Anonymous method can be defined using the delegate keyword
+		Anonymous method must be assigned to a delegate.
+		Anonymous method can access outer variables or functions.
+		Anonymous method can be passed as a parameter.
+		Anonymous method can be used as event handlers.
+
+  
   --  user of ienubarable and ilist 
+     https://www.csharpstar.com/difference-between-ienumerable-icollection-and-ilist-interface-in-c/
+	 IEnumerable Interface:
+	 There are two different interfaces defined in the .NET base class library.There is a non-generic IEnumerable 
+	 interface and there is a generic type-safe IEnumerable<T> interface
+	 
+	 ICollection Interface:
+	There are two different interfaces defined in the .NET base class library.There is 
+	a non-generic ICollection  interface and there is a generic type-safe ICollection interface
+    IList Interface:		
+	IList exists in System.Collections Namespace.
+	IList Interface implements both IEnumerable and ICollection Interface.
+	IList is used to access an element in a specific position/index in a list.
+	Like IEnumerable, IList is also best to query data from in-memory collections like List, Array etc.
+	IList is useful when you want to Add or remove items from the list.
+	IList can find out the no of elements in the collection without iterating the collection.
+    The IList also has generic and non generic version.i.e. IList and IList
+	Ilist and Ilist<T> 
+   
   --  param keywrod  in C#
-  
+    Params is an important keyword in C#. It is used as a parameter which can take the 
+	variable number of arguments.
+	Important Point About Params Keyword :
+	It is useful when programmer don’t have any prior knowledge about the number 
+	of parameters to be used.
+	Only one Params keyword is allowed and no additional Params will be allowed in 
+	function declaration after a params keyword.
+	The length of params will be zero if no arguments will be passed.
+	
+    // C# program to illustrate the 
+	// use of params keyword 
+		using System; 
+		namespace Examples { 
+			
+		class Geeks { 
+			
+			// function containing params parameters 
+			public static int Add(params int[] ListNumbers) 
+			{ 
+				int total = 0; 
+				
+				// foreach loop 
+				foreach(int i in ListNumbers) 
+				{ 
+					total += i; 
+				} 
+				return total; 
+			} 
+				
+		// Driver Code	 
+		static void Main(string[] args) 
+		{ 
+			
+			// Calling function by passing 5 
+			// arguments as follows 
+			int y = Add(12,13,10,15,56); 
+			
+			// Displaying result 
+			Console.WriteLine(y); 
+		} 
+		} 
+		} 
+		
+		using System; 
+		namespace Example2 { 
+		class Geeks { 
+			
+				// function using object type params 
+				public void result(params object[] array) 
+				{ 
+					for (int i = 0; i < array.Length; i++) 
+					{ 
+						
+						// Display result 
+						Console.WriteLine(array[i]); 
+					}	 
+				} 
+
+			// Driver Code 
+			static void Main(string[] args) 
+			{ 
+				Geeks gfg = new Geeks(); 
+				
+				// Variable length arguments 
+				gfg.result("Geeks", "GFG", 
+						"ProGeek Cup 2.0", 
+								"G4G", "100"); 
+			} 
+
+		} 
+		} 
+
   -- transsaction scope used for maintain transaction between to database table. 
-  -- 
-  123 ,then 456 
-  -- 
-  -- singleton and static class diffirence 
   
+  Syntax to use TransactionScope : -
+	using (TransactionScope transactionScope = new TransactionScope())
+	{
+		  try
+		  {
+
+			   method1() // Oracle DML operation
+			   method2() // Sql DML operation
+			   method3() // Oracle DML operation
+			   // transactionScope.complete()
+			   // transactionScope.Dispose();
+		  }
+		  catch (TransactionException ex)
+		  {
+			  transactionScope.Dispose();
+			  MessageBox.Show("Transaction Exception Occured");
+		  }
+		  }
+
+  -- 
+  C) Using a sequence object in multiple tables example
+			First, create a new sequence object:
+
+			CREATE SEQUENCE procurement.receipt_no
+			START WITH 1
+			INCREMENT BY 1;
+
+			Second, create procurement.goods_receipts and procurement.invoice_receipts tables:
+
+			CREATE TABLE procurement.goods_receipts
+			(
+				receipt_id   INT PRIMARY KEY 
+					DEFAULT (NEXT VALUE FOR procurement.receipt_no), 
+				order_id     INT NOT NULL, 
+				full_receipt BIT NOT NULL,
+				receipt_date DATE NOT NULL,
+				note NVARCHAR(100),
+			);
+			 
+			 
+			CREATE TABLE procurement.invoice_receipts
+			(
+				receipt_id   INT PRIMARY KEY
+					DEFAULT (NEXT VALUE FOR procurement.receipt_no), 
+				order_id     INT NOT NULL, 
+				is_late      BIT NOT NULL,
+				receipt_date DATE NOT NULL,
+				note NVARCHAR(100)
+			);
+			Note that both tables have the receipt_id whose values are derived from the procurement.receipt_no sequence.
+
+	Third, insert some rows into both tables without supplying the values for the receipt_id columns:
+  -- singleton and static class diffirence 
+     Static Class:-
+	     Static classes are sealed and therefore cannot be inherited. 
+		 They cannot inherit from any class except Object. Static classes 
+		 cannot contain an instance constructor; however, they can have a static 
+		 constructor. For more information, see Static Constructors (C# Programming Guide).
+
+		You cannot create the instance of static class.
+		Loaded automatically by the .NET Framework common language runtime (CLR) when the program or namespace containing the class is loaded.
+		Static Class cannot have constructor.
+		We cannot pass the static class to method.
+		We cannot inherit Static class to another Static class in C#.
+		A class having all static methods.
+		Better performance (static methods are bonded on compile time)
+		Singleton:-
+
+		You can create one instance of the object and reuse it.
+		Singleton instance is created for the first time when the user requested.
+		Singleton class can have constructor.
+		You can create the object of singleton class and pass it to method.
+		Singleton class does not say any restriction of Inheritance.
+		We can dispose the objects of a singleton class but not of static class.
+		Methods can be overridden.
+		Can be lazy loaded when need (static classes are always loaded).
+		We can implement interface(static class can not implement interface).
+ 
   -- static class intanceiated  : No  and not inherited too . it's like seald class.
   
   -- will the grabse collection collect from stack or heap 
@@ -347,20 +583,20 @@ SELECT * FROM UserCTE AS u;
 		1) Temporary tables and table variables, both have their own pros and cons. We need to decide which one to use and when.
 			Let us compile the list for differences.
 
-		⇒ Table variable (@table) is created in the memory. Whereas, a Temporary table (#temp) is created in the tempdb database. However,
+		? Table variable (@table) is created in the memory. Whereas, a Temporary table (#temp) is created in the tempdb database. However,
 		 if there is a memory pressure the pages belonging to a table variable may be pushed to tempdb.
 
-		⇒ Table variables cannot be involved in transactions, logging or locking. This makes @table faster then #temp. So table variable
+		? Table variables cannot be involved in transactions, logging or locking. This makes @table faster then #temp. So table variable
 		 is faster then temporary table.
 
-		⇒ Temporary tables are allowed CREATE INDEXes whereas, Table variables aren’t allowed CREATE INDEX instead they can have index
+		? Temporary tables are allowed CREATE INDEXes whereas, Table variables aren’t allowed CREATE INDEX instead they can have index
 		 by using Primary Key or Unique Constraint.
 
-		⇒ Table variable can be passed as a parameter to functions and stored procedures while the same cannot be done with Temporary tables.
+		? Table variable can be passed as a parameter to functions and stored procedures while the same cannot be done with Temporary tables.
 
-		⇒ Temporary tables are visible in the created routine and also in the child routines. Whereas, Table variables are only visible in the created routine.
+		? Temporary tables are visible in the created routine and also in the child routines. Whereas, Table variables are only visible in the created routine.
 
-		⇒ Temporary table allows Schema modifications unlike Table variables.
+		? Temporary table allows Schema modifications unlike Table variables.
 
 		2) CTE - Common Table Expressions
 
